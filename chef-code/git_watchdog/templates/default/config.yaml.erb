@@ -1,0 +1,11 @@
+poll_interval: '<%= @startup_options["poll_interval"] %>'
+logging_path: '<%= @config_yaml_params["logging_path"] %>'
+contributors_local_file: '<%= @config_yaml_params["contributors_local_file"] %>' 
+
+github:
+  contributors_api: '<%= @config_yaml_params["contributors_api"] %>'
+twitter:
+  APP_KEY: '<%= @twitter_secrets["APP_KEY"] %>'
+  APP_SECRET: '<%= @twitter_secrets["APP_SECRET"] %>'
+  OAUTH_TOKEN: '<%= @twitter_secrets["OAUTH_TOKEN"] %>'
+  OAUTH_TOKEN_SECRET: '<%= @twitter_secrets["OAUTH_TOKEN_SECRET"] %>'

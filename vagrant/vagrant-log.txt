@@ -1,0 +1,251 @@
+==> default:                 zlib-devel.x86_64 0:1.2.7-15.el7                                              
+==> default:               
+==> default:               Complete!
+==> default: [2016-09-10T17:28:48+00:00] INFO: execute[yum_update] ran successfully
+==> default:     
+==> default: - execute yum -y update
+==> default: 
+==> default:   * execute[display_pip_banner] action run
+==> default: 
+==> default:     [execute] ###################Installing PIP###############################
+==> default: [2016-09-10T17:28:48+00:00] INFO: execute[display_pip_banner] ran successfully
+==> default:     - execute echo "###################Installing PIP###############################"
+==> default: 
+==> default: 
+==> default:   * execute[python_dependeny] action run
+==> default: 
+==> default:     [execute]   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+==> default:                                                Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0 1488k    0 13303    0     0  11544      0  0:02:12  0:00:01  0:02:11 11537
+ 31 1488k   31  463k    0     0   227k      0  0:00:06  0:00:02  0:00:04  226k
+ 78 1488k   78 1167k    0     0   379k      0  0:00:03  0:00:03 --:--:--  379k
+100 1488k  100 1488k    0     0   442k      0  0:00:03  0:00:03 --:--:--  442k
+==> default:               Collecting pip
+==> default:                 Downloading pip-8.1.2-py2.py3-none-any.whl (1.2MB)
+==> default:               Collecting wheel
+==> default:                 Downloading wheel-0.29.0-py2.py3-none-any.whl (66kB)
+==> default:               Installing collected packages: pip, wheel
+==> default:               Successfully installed pip-8.1.2 wheel-0.29.0
+==> default:               Collecting pyyaml
+==> default:                 Downloading PyYAML-3.12.tar.gz (253kB)
+==> default:               Collecting requests
+==> default:                 Downloading requests-2.11.1-py2.py3-none-any.whl (514kB)
+==> default:               Collecting twython
+==> default:                 Downloading twython-3.4.0.tar.gz
+==> default:               Collecting requests_oauthlib>=0.4.0 (from twython)
+==> default:                 Downloading requests_oauthlib-0.6.2-py2.py3-none-any.whl
+==> default:               Collecting oauthlib>=0.6.2 (from requests_oauthlib>=0.4.0->twython)
+==> default:                 Downloading oauthlib-2.0.0.tar.gz (122kB)
+==> default:               Building wheels for collected packages: pyyaml, twython, oauthlib
+==> default:                 Running setup.py bdist_wheel for pyyaml: started
+==> default:                 Running setup.py bdist_wheel for pyyaml: finished with status 'done'
+==> default:                 Stored in directory: /root/.cache/pip/wheels/2c/f7/79/13f3a12cd723892437c0cfbde1230ab4d82947ff7b3839a4fc
+==> default:                 Running setup.py bdist_wheel for twython: started
+==> default:                 Running setup.py bdist_wheel for twython: finished with status 'done'
+==> default:                 Stored in directory: /root/.cache/pip/wheels/48/e9/f5/a4c968725948c73f71df51a3c6759425358c1eda2dcf2031f4
+==> default:                 Running setup.py bdist_wheel for oauthlib: started
+==> default:                 Running setup.py bdist_wheel for oauthlib: finished with status 'done'
+==> default:                 Stored in directory: /root/.cache/pip/wheels/e4/e1/92/68af4b20ac26182fbd623647af92118fc4cdbdb2c613030a67
+==> default:               Successfully built pyyaml twython oauthlib
+==> default:               Installing collected packages: pyyaml, requests, oauthlib, requests-oauthlib, twython
+==> default:               Successfully installed oauthlib-2.0.0 pyyaml-3.12 requests-2.11.1 requests-oauthlib-0.6.2 twython-3.4.0
+==> default: [2016-09-10T17:29:21+00:00] INFO: execute[python_dependeny] ran successfully
+==> default:     - execute /usr/bin/curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && /usr/bin/python get-pip.py && /usr/bin/pip install pyyaml requests twython
+==> default:   * user[watchdog] action create
+==> default: [2016-09-10T17:29:21+00:00] INFO: user[watchdog] created
+==> default: 
+==> default:     - create user watchdog
+==> default:   * cookbook_file[/home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm] action create
+==> default: [2016-09-10T17:29:21+00:00] INFO: cookbook_file[/home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm] created file /home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm
+==> default: 
+==> default:     - create new file /home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm
+==> default: [2016-09-10T17:29:21+00:00] INFO: cookbook_file[/home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm] updated file contents /home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm
+==> default: 
+==> default:     - update content in file /home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm from none to 809cab
+==> default:     (new content is binary, diff output suppressed)[2016-09-10T17:29:21+00:00] INFO: cookbook_file[/home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm] owner changed to 1002
+==> default: [2016-09-10T17:29:21+00:00] INFO: cookbook_file[/home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm] group changed to 1002
+==> default: [2016-09-10T17:29:21+00:00] INFO: cookbook_file[/home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm] mode changed to 755
+==> default: 
+==> default:     - change mode from '' to '0755'
+==> default:     - change owner from '' to 'watchdog'
+==> default:     - change group from '' to 'watchdog'
+==> default: 
+==> default:   * execute[cd /home/watchdog && yum install github_watchdog-1.0.0-1.x86_64.rpm -y] action run
+==> default: 
+==> default:     [execute] Loaded plugins: fastestmirror
+==> default:               Examining github_watchdog-1.0.0-1.x86_64.rpm: github_watchdog-1.0.0-1.x86_64
+==> default:               Marking github_watchdog-1.0.0-1.x86_64.rpm to be installed
+==> default:               Resolving Dependencies
+==> default:               --> Running transaction check
+==> default:               ---> Package github_watchdog.x86_64 0:1.0.0-1 will be installed
+==> default:               --> Finished Dependency Resolution
+==> default:               
+==> default:               Dependencies Resolved
+==> default:               
+==> default:               ================================================================================
+==> default:               
+==> default:  Package           Arch     Version     Repository                         Size
+==> default:               ================================================================================
+==> default:               Installing:
+==> default:                github_watchdog   x86_64   1.0.0-1     /github_watchdog-1.0.0-1.x86_64   3.7 k
+==> default:               
+==> default:               Transaction Summary
+==> default:               ================================================================================
+==> default:               Install  1 Package
+==> default:               
+==> default:               Total size: 3.7 k
+==> default:               Installed size: 3.7 k
+==> default:               Downloading packages:
+==> default:               Running transaction check
+==> default:               Running transaction test
+==> default:               Transaction test succeeded
+==> default:               Running transaction
+==> default:                 Installing : github_watchdog-1.0.0-1.x86_64                               1/1
+==> default:  
+==> default:                 Verifying  : github_watchdog-1.0.0-1.x86_64                               1/1
+==> default:  
+==> default:               
+==> default:               Installed:
+==> default:                 github_watchdog.x86_64 0:1.0.0-1                                              
+==> default:               
+==> default:      
+==> default:      github:
+==> default:     -  contributors_api: 'https://api.github.com/repos/'
+==> default:     +  contributors_api: 'https://api.github.com/repos/mitalikhare/study/contributors'
+==> default:      twitter:
+==> default:     -  APP_KEY: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+==> default:     -  APP_SECRET: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+==> default:     -  OAUTH_TOKEN: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+==> default:     -  OAUTH_TOKEN_SECRET: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+==> default:     +  APP_KEY: 'AAAAAAAAAAAAAAAAAAAAAAAAAA'
+==> default:     +  APP_SECRET: 'AAAAAAAAAAAAAAAAAAAAAAAAAA'
+==> default:     +  OAUTH_TOKEN: 'AAAAAAAAAAAAAAAAAAAAAAAAAA'
+==> default:     +  OAUTH_TOKEN_SECRET: 'AAAAAAAAAAAAAAAAAAAAAAAAAA'
+==> default: 
+==> default:   * service[watchdog] action enable
+==> default: [2016-09-10T17:29:23+00:00] INFO: service[watchdog] enabled
+==> default: 
+==> default:     - enable service service[watchdog]
+==> default: 
+==> default:   * service[watchdog] action start
+==> default: [2016-09-10T17:29:23+00:00] INFO: service[watchdog] started
+==> default: 
+==> default:     - start service service[watchdog]
+==> default: 
+==> default: 
+==> default: [2016-09-10T17:29:23+00:00] INFO: Chef Run complete in 388.300711462 seconds
+==> default: 
+==> default: Running handlers:
+==> default: [2016-09-10T17:29:23+00:00] INFO: Running report handlers
+==> default: Running handlers complete
+==> default: [2016-09-10T17:29:23+00:00] INFO: Report handlers complete
+==> default: Chef Client finished, 16/16 resources updated in 06 minutes 30 seconds
+banl12915848d:~ ravips2394$ vagrant ssh
+Welcome to your Vagrant-built virtual machine.
+[vagrant@localhost ~]$ sudo  su
+[root@localhost vagrant]# systemctl status watchdog
+● watchdog.service - watchdog Service
+   Loaded: loaded (/etc/systemd/system/watchdog.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sat 2016-09-10 17:29:23 UTC; 1min 37s ago
+ Main PID: 29890 (watchdog.sh)
+   CGroup: /system.slice/watchdog.service
+           ├─29890 /bin/bash /usr/bin/watchdog.sh
+           └─29905 sleep 60
+
+Sep 10 17:29:23 localhost.localdomain systemd[1]: Started watchdog Service.
+Sep 10 17:29:23 localhost.localdomain systemd[1]: Starting watchdog Service...
+Sep 10 17:29:23 localhost.localdomain watchdog.sh[29890]: ~ /
+Sep 10 17:29:24 localhost.localdomain watchdog.sh[29890]: local list: [u'mitalikhare', u'ravimails2004', u'amagri']
+Sep 10 17:29:24 localhost.localdomain watchdog.sh[29890]: remote list: [u'mitalikhare', u'ravimails2004', u'amagri']
+Sep 10 17:29:24 localhost.localdomain watchdog.sh[29890]: There is no change
+Sep 10 17:30:24 localhost.localdomain watchdog.sh[29890]: ~ ~ /
+Sep 10 17:30:26 localhost.localdomain watchdog.sh[29890]: local list: [u'mitalikhare', u'ravimails2004', u'amagri']
+Sep 10 17:30:26 localhost.localdomain watchdog.sh[29890]: remote list: [u'mitalikhare', u'ravimails2004', u'amagri']
+Sep 10 17:30:26 localhost.localdomain watchdog.sh[29890]: There is no change
+[root@localhost vagrant]# 
+
+
+banl12915848d:~ ravips2394$ vagrant provision
+==> default: Running provisioner: chef_solo...
+==> default: Detected Chef (latest) is already installed
+==> default: Generating chef JSON and uploading...
+==> default: Running chef-solo...
+==> default: [2016-09-10T17:32:36+00:00] INFO: Started chef-zero at chefzero://localhost:8889 with repository at /tmp/vagrant-chef/d38fcd0d0e9bddc93c6aa201d9c75d57
+==> default:   One version per cookbook
+==> default: 
+==> default: [2016-09-10T17:32:36+00:00] INFO: Forking chef instance to converge...
+==> default: Starting Chef Client, version 12.13.37
+==> default: [2016-09-10T17:32:36+00:00] INFO: *** Chef 12.13.37 ***
+==> default: [2016-09-10T17:32:36+00:00] INFO: Platform: x86_64-linux
+==> default: [2016-09-10T17:32:36+00:00] INFO: Chef-client pid: 31022
+==> default: [2016-09-10T17:32:37+00:00] INFO: Setting the run_list to ["recipe[git_watchdog]"] from CLI options
+==> default: [2016-09-10T17:32:37+00:00] INFO: Run List is [recipe[git_watchdog]]
+==> default: [2016-09-10T17:32:37+00:00] INFO: Run List expands to [git_watchdog]
+==> default: [2016-09-10T17:32:37+00:00] INFO: Starting Chef Run for vagrant-6fea0c0c
+==> default: [2016-09-10T17:32:37+00:00] INFO: Running start handlers
+==> default: [2016-09-10T17:32:37+00:00] INFO: Start handlers complete.
+==> default: [2016-09-10T17:32:37+00:00] INFO: HTTP Request Returned 404 Not Found: Object not found: 
+==> default: resolving cookbooks for run list: ["git_watchdog"]
+==> default: [2016-09-10T17:32:38+00:00] INFO: Loading cookbooks [git_watchdog@0.1.0]
+==> default: Synchronizing Cookbooks:
+==> default:   - git_watchdog (0.1.0)
+==> default: Installing Cookbook Gems:
+==> default: Compiling Cookbooks...
+==> default:     - execute echo "##################Lets run the yum update and fix the pkg dependency, this is really needed as we need to add some packages to run this program #########################"
+==> default:   * execute[yum_update] action run
+==> default: 
+==> default:     [execute] Loaded plugins: fastestmirror
+==> default:               Loading mirror speeds from cached hostfile
+==> default:                * base: ftp.iitm.ac.in
+==> default:                * extras: ftp.iitm.ac.in
+==> default:                * updates: ftp.iitm.ac.in
+==> default:               No packages marked for update
+==> default: [2016-09-10T17:34:36+00:00] INFO: execute[yum_update] ran successfully
+==> default:     - execute yum -y update
+==> default:   * execute[display_pip_banner] action run
+==> default: 
+==> default:     [execute] ###################Installing PIP###############################
+==> default: [2016-09-10T17:34:36+00:00] INFO: execute[display_pip_banner] ran successfully
+==> default:     - execute echo "###################Installing PIP###############################"
+==> default: 
+==> default: 
+==> default:   * execute[python_dependeny] action run
+==> default:  (skipped due to not_if)
+==> default:   * user[watchdog] action create
+==> default:  (up to date)
+==> default:   
+==> default: * cookbook_file[/home/watchdog/github_watchdog-1.0.0-1.x86_64.rpm] action create
+==> default:  (up to date)
+==> default:   * execute[cd /home/watchdog && yum install github_watchdog-1.0.0-1.x86_64.rpm -y] action run
+==> default: [2016-09-10T17:34:36+00:00] INFO: execute[Guard resource] ran successfully
+==> default:  (skipped due to not_if)
+==> default:   * file[/home/watchdog/config.yaml] action create
+==> default:  (up to date)
+==> default:   * file[/home/watchdog/contributors.json] action create
+==> default:  (up to date)
+==> default:   * file[/home/watchdog/git_watchdog.log] action create
+==> default:  (up to date)
+==> default:   
+==> default: * file[/home/watchdog/watchdog.py] action create
+==> default:  (up to date)
+==> default:   * template[/usr/bin/watchdog.sh] action create
+==> default:  (up to date)
+==> default:   * template[/etc/systemd/system//watchdog.service] action create
+==> default:  (up to date)
+==> default:   * template[/home/watchdog/config.yaml] action create
+==> default:  (up to date)
+==> default:   * service[watchdog] action enable
+==> default:  (up to date)
+==> default:   * service[watchdog] action start
+==> default:  (up to date)
+==> default: [2016-09-10T17:34:36+00:00] INFO: Chef Run complete in 1.698296167 seconds
+==> default: 
+==> default: Running handlers:
+==> default: [2016-09-10T17:34:36+00:00] INFO: Running report handlers
+==> default: Running handlers complete
+==> default: [2016-09-10T17:34:36+00:00] INFO: Report handlers complete
+==> default: Chef Client finished, 3/16 resources updated in 03 seconds
+banl12915848d:~ ravips2394$ 
+

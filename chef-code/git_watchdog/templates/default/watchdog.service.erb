@@ -1,0 +1,13 @@
+[Unit]
+Description=watchdog Service
+After=network.target
+
+[Service]
+Type=<%= @startup_options["type"] %>
+User=<%= @startup_options["user"] %>
+ExecStart=<%= @startup_options["ExecStart"] %>
+Restart=<%= @startup_options["Restart_behaviour"] %>
+
+
+[Install]
+WantedBy=multi-user.target

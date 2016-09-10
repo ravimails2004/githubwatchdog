@@ -1,0 +1,11 @@
+poll_interval: 10
+logging_path: '/home/watchdog/git_watchdog.log'
+contributors_local_file: 'contributors.json'
+
+github:
+  contributors_api: 'https://api.github.com/repos/'
+twitter:
+  APP_KEY: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  APP_SECRET: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  OAUTH_TOKEN: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  OAUTH_TOKEN_SECRET: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'

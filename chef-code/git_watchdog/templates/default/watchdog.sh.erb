@@ -1,0 +1,6 @@
+#!/bin/bash
+while [ 1 ]; do
+pushd /home/watchdog
+/usr/bin/python watchdog.py -c config.yaml
+sleep <%= @startup_options["poll_interval"] %>
+done
